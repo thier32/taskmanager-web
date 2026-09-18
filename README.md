@@ -34,6 +34,10 @@ Avant de commencer, assurez-vous d'avoir installé sur votre machine :
 
 1. **Cloner le dépôt** (si ce n'est pas déjà fait) ou se placer dans le dossier du projet :
    ```bash
+      git clone https://github.com/thier32/taskmanager-web.git
+   ```
+
+   ```bash
    cd taskmanager-web
    ```
 
@@ -92,7 +96,7 @@ taskmanager-web/
 
 ---
 
-## Optionnel. 🐳 Docker & Déploiement
+## Optionnel.  Docker & Déploiement
 
 Un fichier `Dockerfile` est présent à la racine pour conteneuriser l'application si vous souhaitez l'exécuter dans un conteneur.
 
