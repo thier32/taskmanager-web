@@ -22,7 +22,7 @@ export default function Register({ onRegisterSuccess, onSwitchToLogin }) {
     setLoading(true);
 
     try {
-      await api.post('/auth/register', { username, email, password });
+      await api.post('/auth/register', { username, email, password,confirmPassword });
       
       if (onRegisterSuccess) {
         onRegisterSuccess();
