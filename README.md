@@ -103,7 +103,12 @@ Un fichier `Dockerfile` est présent à la racine pour conteneuriser l'applicati
 Pour construire et lancer l'image Docker :
 ```bash
 docker build -t taskmanager-web .
-docker run -p 80:80 taskmanager-web
+docker run -p 6000:80 taskmanager-web
 ```
+
+Une fois le conteneur lancé avec succès, vous pouvez accéder à l'application directement depuis votre navigateur web à l'adresse suivante :
+[http://127.0.0.1:6000](http://127.0.0.1:6000) (ou `http://127.0.0.1:60000`)
+ [http://localhost:6000](http://localhost) (ou `http://localhost:60000`)
+
 
 ---
