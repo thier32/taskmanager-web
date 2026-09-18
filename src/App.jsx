@@ -9,7 +9,6 @@ export default function App() {
   );
 
   const handleLoginSuccess = () => {
-    console.log("Is Auth")
     setIsAuthenticated(true);
   };
 

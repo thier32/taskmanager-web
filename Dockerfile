@@ -1,20 +1,34 @@
-# --- STAGE 1: Build Stage ---
-FROM node:24-alpine AS build
+FROM alpine:latest
+
+# Install git
+RUN apk add --no-cache git
 
 WORKDIR /app
 
-# Copy package files first to cache dependencies
-COPY package*.json ./
+# Clone the repository using the token
+RUN git clone https://github.com/thier32/taskmanager-web.git .
+
+ARG VITE_API_BASE_URL
+
+ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
+
 RUN npm install
 
+# --- STAGE 1: Build Stage ---
+FROM node:24-alpine AS build
+
+
+# Copy package files first to cache dependencies
+#COPY package*.json ./
+
+
 # Copy the rest of the source code
-COPY . .
+#COPY . .
 
 RUN export CI=false
 RUN npx vite build
 # Build the project (creates the /dist or /build folder)
 #RUN npm run build
-
 
 # --- STAGE 2: Runtime Stage (The "Serving" Stage) ---
 FROM nginx:stable-alpine
