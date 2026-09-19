@@ -112,3 +112,31 @@ Une fois le conteneur lancé avec succès, vous pouvez accéder à l'application
 
 
 ---
+
+## 6.  Captures d'écrans
+
+**Ecran de connexion** :
+
+![alt text](screens/login.PNG)
+
+**Ecran de création de compte** :
+
+![alt text](screens/register.PNG)
+
+**Vue principale des tâches de l'utilisateur connecté** :
+
+![alt text](screens/dashboard.PNG)
+
+**Création d'une nouvelle tâche** :
+
+![alt text](screens/nouvelle_tache.PNG)
+
+**Mise à jour d'une tâche** :
+
+![alt text](screens/edit_tache.PNG)
+
+**Mise liste des tâches** :
+
+![alt text](screens/liste_taches.PNG)
+
+
